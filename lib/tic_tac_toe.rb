@@ -71,8 +71,9 @@ class TicTacToe
     won? || full?
   end
 
-  def winner 
-    if won? 
+  def winner
+    if won?
       @board[won?].first
-  end 
+    end
+  end
 end
