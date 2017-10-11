@@ -62,4 +62,8 @@ class TicTacToe
   def full?
     @board.all? { |spot| spot == "X" || spot == "O"}
   end
+
+  def draw? 
+    !won? && full?
+  end 
 end
