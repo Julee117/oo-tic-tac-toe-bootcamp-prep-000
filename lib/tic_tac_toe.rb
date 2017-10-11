@@ -48,4 +48,14 @@ class TicTacToe
   def current_player
     turn_count.even? ? "X" : "O"
   end
+
+  def won? 
+    if WIN_COMBINATIONS.any? do |combo| 
+      @board[combo[0]] == "X" && @board[combo[1]] == "X" && board[combo[2]] == "X" ||
+      @board[combo[0]] == "O" && @board[combo[1]] == "O" && board[combo[2]] == "O"
+        return combo 
+    else 
+      return false 
+    end 
+  end
 end
