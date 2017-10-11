@@ -70,4 +70,9 @@ class TicTacToe
   def over?
     won? || full?
   end
+
+  def winner 
+    if won? 
+      @board[won?].first
+  end 
 end
